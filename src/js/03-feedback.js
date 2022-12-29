@@ -29,8 +29,9 @@ if (normalizedData && (normalizedData.hasOwnProperty('email') === true || normal
   messageInput.value = '';
 }
 
-const submitBtn = document.querySelector("button");
-submitBtn.addEventListener("click", () => {
+const submitBtn = document.querySelector(".feedback-form");
+submitBtn.addEventListener("submit", (event) => {
+  event.preventDefault();
   console.log(data);
   localStorage.removeItem("feedback-form-state");
 })
